@@ -18,7 +18,7 @@
 			var term=$('#search_term').val();
 
 			$.ajax({
-				url:'https://newsapi.org/v2/everything?q=' + term +'&apiKey=ae2cc03471db4591b192946348dd4709',
+				url:'https://newsapi.org/v2/top-headlines?country=us&category='+term+'&apiKey=ae2cc03471db4591b192946348dd4709',
 				success:function(data){
 					$('#result').empty();
 
@@ -40,7 +40,7 @@
 
 
 		$.ajax({
-			url:"https://newsapi.org/v2/top-headlines?country=jp&apiKey=ae2cc03471db4591b192946348dd4709",
+			url:'https://newsapi.org/v2/everything?q=apple&from=2021-04-14&to=2021-04-14&sortBy=popularity&apiKey=ae2cc03471db4591b192946348dd4709',
 			success:function(data){
 
 				for (var i in data.articles){
